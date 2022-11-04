@@ -99,7 +99,7 @@
     <LinkIncremental>false</LinkIncremental>
     <EmbedManifest>true</EmbedManifest>
     <OutDir>..\BIN\</OutDir>
-    <TargetName>ReclassEx64</TargetName>
+    <TargetName>$(ProjectName)64</TargetName>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
     <CodeAnalysisRules />
     <CodeAnalysisRuleAssemblies />
