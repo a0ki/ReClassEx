@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|x64">
@@ -20,7 +20,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGUID>{CAA771F3-4C4E-3957-A9F2-036955241D29}</ProjectGUID>
-    <WindowsTargetPlatformVersion>10.0.10586.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
     <ProjectName>ZERO_CHECK</ProjectName>
@@ -30,25 +30,25 @@
     <ConfigurationType>Utility</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'" Label="Configuration">
     <ConfigurationType>Utility</ConfigurationType>
     <UseOfMfc>false</UseOfMfc>
     <CharacterSet>MultiByte</CharacterSet>
-    <PlatformToolset>v140</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
@@ -57,13 +57,13 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-    <PropertyGroup>
-      <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-      <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
-    </PropertyGroup>
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Midl>
       <AdditionalIncludeDirectories>C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\beaengine\src;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\beaengine\include;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\beaengine;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\beaengine\unittest\thirdparty\zlib;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -105,62 +105,7 @@
     </Midl>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\f7718e9157b6e3bf98b6c88c858cbd4e\generate.stamp.rule">
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Checking Build System</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/beaengine" "-BC:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/build_2015_64" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/build_2015_64/CMakeFiles/f7718e9157b6e3bf98b6c88c858cbd4e/generate.stamp.rule;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\SelectLibraryConfigurations.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\beaengine\CMakeLists.txt;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\beaengine\src\CMakeLists.txt;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeCCompiler.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeRCCompiler.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\generate.stamp;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\obj.64\Windows.msvc.RelWithDebInfo\src\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Checking Build System</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/beaengine" "-BC:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/build_2015_64" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/build_2015_64/CMakeFiles/f7718e9157b6e3bf98b6c88c858cbd4e/generate.stamp.rule;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\SelectLibraryConfigurations.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\beaengine\CMakeLists.txt;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\beaengine\src\CMakeLists.txt;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeCCompiler.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeRCCompiler.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\generate.stamp;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\obj.64\Windows.msvc.RelWithDebInfo\src\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">Checking Build System</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/beaengine" "-BC:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/build_2015_64" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/build_2015_64/CMakeFiles/f7718e9157b6e3bf98b6c88c858cbd4e/generate.stamp.rule;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\SelectLibraryConfigurations.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\beaengine\CMakeLists.txt;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\beaengine\src\CMakeLists.txt;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeCCompiler.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeRCCompiler.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\generate.stamp;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\obj.64\Windows.msvc.RelWithDebInfo\src\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='MinSizeRel|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">Checking Build System</Message>
-      <Command Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">setlocal
-"C:\Program Files (x86)\CMake\bin\cmake.exe" "-HC:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/beaengine" "-BC:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/build_2015_64" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "$(SolutionPath)"
-if %errorlevel% neq 0 goto :cmEnd
-:cmEnd
-endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
-:cmErrorLevel
-exit /b %1
-:cmDone
-if %errorlevel% neq 0 goto :VCEnd</Command>
-      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/build_2015_64/CMakeFiles/f7718e9157b6e3bf98b6c88c858cbd4e/generate.stamp.rule;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCXXInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeCommonLanguageInclude.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeGenericSystem.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeParseArguments.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeRCInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInformation.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\CMakeSystemSpecificInitialize.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Compiler\MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageHandleStandardArgs.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindPackageMessage.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\FindZLIB.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-C.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC-CXX.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows-MSVC.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\Windows.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\Platform\WindowsPaths.cmake;C:\Program Files (x86)\CMake\share\cmake-3.4\Modules\SelectLibraryConfigurations.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\beaengine\CMakeLists.txt;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\beaengine\src\CMakeLists.txt;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeCCompiler.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeCXXCompiler.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeRCCompiler.cmake;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\3.4.3\CMakeSystem.cmake;%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\CMakeFiles\generate.stamp;C:\Users\Owner\Documents\Visual Studio 2013\Projects\Reclass\Reclass64-master\beaengine\build_2015_64\obj.64\Windows.msvc.RelWithDebInfo\src\CMakeFiles\generate.stamp</Outputs>
-      <LinkObjects Condition="'$(Configuration)|$(Platform)'=='RelWithDebInfo|x64'">false</LinkObjects>
-    </CustomBuild>
-  </ItemGroup>
-  <ItemGroup>
+    <None Include="CMakeFiles\f7718e9157b6e3bf98b6c88c858cbd4e\generate.stamp.rule" />
   </ItemGroup>
   <ItemGroup>
   </ItemGroup>

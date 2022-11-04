@@ -1,5 +1,6 @@
 #include "Plugin.h"
 #include "resource.h"
+#include "service.h"
 
 BOOL gTestPluginState = FALSE;
 
@@ -260,26 +261,34 @@ WriteCallback(
     OUT PSIZE_T BytesWritten 
 )
 {
-    DWORD OldProtect;
+    service::Driver().ProcessId = ReClassGetProcessId();
+    /*DWORD OldProtect;
     HANDLE ProcessHandle = ReClassGetProcessHandle( );
     VirtualProtectEx( ProcessHandle, (PVOID)Address, Size, PAGE_EXECUTE_READWRITE, &OldProtect );
     BOOL Retval = WriteProcessMemory( ProcessHandle, (PVOID)Address, Buffer, Size, BytesWritten );
-    VirtualProtectEx( ProcessHandle, (PVOID)Address, Size, OldProtect, NULL );
-    return Retval;
+    VirtualProtectEx( ProcessHandle, (PVOID)Address, Size, OldProtect, NULL );*/
+    if (NT_SUCCESS(service::Driver().Write(Address, Buffer, Size))) {
+        return TRUE;
+    }
+    return FALSE;
 }
 
 BOOL 
 PLUGIN_CC 
-ReadCallback( 
+ReadCallback(
     IN LPVOID Address,
     IN LPVOID Buffer,
     IN SIZE_T Size,
-    OUT PSIZE_T BytesRead 
+    OUT PSIZE_T BytesRead
 )
 {
-    HANDLE ProcessHandle = ReClassGetProcessHandle( );
-    BOOL Retval = ReadProcessMemory( ProcessHandle, (LPVOID)Address, Buffer, Size, BytesRead );
-    if (!Retval)
-        ZeroMemory( Buffer, Size );
-    return Retval;
+    /*HANDLE ProcessHandle = ReClassGetProcessHandle();
+   BOOL Retval = ReadProcessMemory( ProcessHandle, (LPVOID)Address, Buffer, Size, BytesRead );
+   if (!Retval)
+       ZeroMemory( Buffer, Size );*/
+    service::Driver().ProcessId = ReClassGetProcessId();
+    if (NT_SUCCESS(service::Driver().Read(Buffer, Address, Size)))
+        return TRUE;
+
+    return FALSE;
 }

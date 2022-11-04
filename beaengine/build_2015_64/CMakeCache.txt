@@ -15,10 +15,10 @@
 ########################
 
 //Value Computed by CMake
-BeaEngine_BINARY_DIR:STATIC=C:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/build_2015_64
+BeaEngine_BINARY_DIR:STATIC=C:/Users/P0/Documents/GitHub/ReClassEx/beaengine/build_2015_64
 
 //Value Computed by CMake
-BeaEngine_SOURCE_DIR:STATIC=C:/Users/Owner/Documents/Visual Studio 2013/Projects/Reclass/Reclass64-master/beaengine/beaengine
+BeaEngine_SOURCE_DIR:STATIC=C:/Users/P0/Documents/GitHub/ReClassEx/beaengine/beaengine
 
 //Dependencies for target
 BeaEngine_s_64_LIB_DEPENDS:STATIC=

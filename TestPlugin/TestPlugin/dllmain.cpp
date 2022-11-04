@@ -1,5 +1,6 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include <Windows.h>
+#include "service.h"
 
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
@@ -9,6 +10,9 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     switch (ul_reason_for_call)
     {
     case DLL_PROCESS_ATTACH:
+        service::Driver().GrantPriviledge(L"SeDebugPrivilege");
+        service::Driver().GrantPriviledge(L"SeLoadDriverPrivilege");
+        service::Driver().Install(L"");
     case DLL_THREAD_ATTACH:
     case DLL_THREAD_DETACH:
     case DLL_PROCESS_DETACH:
