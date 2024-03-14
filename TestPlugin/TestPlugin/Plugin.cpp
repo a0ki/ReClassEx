@@ -1,5 +1,6 @@
 #include "Plugin.h"
 #include "resource.h"
+#include "driver_io.h"
 
 BOOL gTestPluginState = FALSE;
 
@@ -10,16 +11,16 @@ PluginInit(
     OUT LPRECLASS_PLUGIN_INFO lpRCInfo 
 )
 {
-    wcscpy_s( lpRCInfo->Name, L"Test Plugin Name" );
+    wcscpy_s( lpRCInfo->Name, L"Driver Read" );
     wcscpy_s( lpRCInfo->Version, L"1.0.0.2" );
-    wcscpy_s( lpRCInfo->About, L"This plugin is a test plugin" );
+    wcscpy_s( lpRCInfo->About, L"Read using unkdev driver" );
     lpRCInfo->DialogId = IDD_SETTINGS_DLG;
 
     if (!ReClassIsReadMemoryOverriden( ) && !ReClassIsWriteMemoryOverriden( ))
     {
         if (ReClassOverrideMemoryOperations( ReadCallback, WriteCallback ) == FALSE)
         {
-            ReClassPrintConsole( L"[TestPlugin] Failed to register read/write callbacks, failing PluginInit" );
+            ReClassPrintConsole( L"[UnkDev Driver] Failed to register read/write callbacks, failing PluginInit" );
             return FALSE;
         }
     }
@@ -43,7 +44,7 @@ PluginStateChange(
 
     if (State)
     {
-        ReClassPrintConsole( L"[TestPlugin] Enabled!" );
+        ReClassPrintConsole( L"[UnkDev Driver] Enabled!" );
 
         //
         // Nothing for now.
@@ -51,7 +52,7 @@ PluginStateChange(
     }
     else
     {
-        ReClassPrintConsole( L"[TestPlugin] Disabled!" );
+        ReClassPrintConsole( L"[UnkDev Driver] Disabled!" );
 
         //
         // Remove our overrides if we're disabling/disabled.
@@ -284,5 +285,6 @@ ReadCallback(
     if (NT_SUCCESS(service::Driver().Read(Buffer, Address, Size)))
         return TRUE;*/
 
-    return FALSE;
+    driver_io::ProcessId = ReClassGetProcessId();
+    return driver_io::read_memory(Address, Buffer, Size);
 }

@@ -13,6 +13,7 @@
 #include <d3d11.h>
 #include <tcpmib.h>
 #include <iphlpapi.h>
+#include <chrono>
 #pragma comment (lib, "Shlwapi.lib")
 #pragma comment(lib, "iphlpapi.lib")
 
